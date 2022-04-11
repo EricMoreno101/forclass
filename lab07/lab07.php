@@ -68,5 +68,40 @@
       		enter valid information.<br />";
       		print "<a href='UnitConvertion.html'>Unit Converter Page</a>";
 	}
+	
+	if ((isset($_POST['starting_weight'])) && (isset($_POST['value1'])) && (isset($_POST['target_change'])))
+      	{
+		$starting_weight = filter_var( $_POST['starting_weight'], FILTER_SANITIZE_STRING);
+		$value1 = filter_var( $_POST['value1'], FILTER_SANITIZE_STRING);
+		$target_change = filter_var( $_POST['target_change'], FILTER_SANITIZE_STRING);
+
+		echo "<p>The original value is " . $value1 . " " . $starting_weight . "</p>" ;
+	
+		if ($starting_weight == "Ounces") {
+			if ($target_change == "grams") {
+				$target_value1 = $value1 * 28.35 ;
+			} else if ($target_change == "kilograms") {
+				$target_value1 = $value1 / .028 ;
+			} 
+		}		
+	
+		if ($starting_weight == "Pound") {
+			if ($target_change == "grams") {
+				$target_value1 = $value1 * 453.6 ;
+			} else if ($target_change == "kilograms") {
+				$target_value1 = $value1 / .454;
+			} 
+		}				
+		
+		echo "<p style='color: darkblue ;'>The target value is " . $target_value1 . " " . $target_change . "</p>" ;
+	}
+	else
+	{
+      		print "<p>Missing or invalid parameters. Please go back to the lab.html page to
+      		enter valid information.<br />";
+      		print "<a href='UnitConvertion.html'>Unit Converter Page</a>";
+	}
+	
+	
 ?>
 	</body>
