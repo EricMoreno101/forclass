@@ -32,6 +32,7 @@
                 $zip = filter_var( $_POST['zip'], FILTER_SANITIZE_STRING);
                 $age = filter_var( $_POST['age'], FILTER_SANITIZE_STRING);
                 $size = filter_var( $_POST['size'], FILTER_SANITIZE_STRING);
+		$fee = 25;
 
                 echo "<p>Your First Name is " . $first_name . "</p>" ;
                 echo "<p>Your Last Name is " . $last_name . "</p>" ;
@@ -41,10 +42,26 @@
                 echo "<p>Your Zipcode is " . $zip . "</p>" ;
 
 		// Enter your codes below
-
-
+		if($age >= 12 )
+		{
+			if($size == "XL")
+			{
+				$fee += 2;
+				echo "<p> damn bruh </p>";
+			}
+			if($age >= 65)
+			{
+				$fee -= 5;
+			}
+		}
+		else
+		{
+			echo "<p> We told you, you need to be 12 bozo you tryna get smacked ??</p>";
+		}
+		
 
 		// ----------------------------------------------------
+		
 
                 echo "<p style='color: darkblue ;'>Your registration fee is " . $fee . "</p>" ;
         }
