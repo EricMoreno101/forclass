@@ -81,7 +81,7 @@
 			if ($target_change == "grams") {
 				$target_value1 = $value1 * 28.35 ;
 			} else if ($target_change == "kilograms") {
-				$target_value1 = $value1 / .028 ;
+				$target_value1 = $value1 / 35.274 ;
 			} 
 		}		
 	
@@ -89,7 +89,7 @@
 			if ($target_change == "grams") {
 				$target_value1 = $value1 * 453.6 ;
 			} else if ($target_change == "kilograms") {
-				$target_value1 = $value1 / .454;
+				$target_value1 = $value1 / 2.205;
 			} 
 		}				
 		
@@ -113,19 +113,19 @@
 	
 		if ($starting == "Fluid Ounces") {
 			if ($target_diff == "liters") {
-				$target_value2 = $value2 /0.0295735;
+				$target_value2 = $value2 / 33.814;
 			} 
 		}		
 	
 		if ($starting == "Pint") {
 			if ($target_diff == "liters") {
-				$target_value2 = $value2 / .473176 ;
+				$target_value2 = $value2 / 2.113 ;
 			} 
 		}
 		
 		if ($starting == "Quart") {
 			if ($target_diff == "liters") {
-				$target_value2 = $value2 / .946353 ;
+				$target_value2 = $value2 / 1.057 ;
 			} 
 		}
 		
