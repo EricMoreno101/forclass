@@ -47,7 +47,7 @@
 			if($size == "XL")
 			{
 				$fee += 2;
-				echo "<p> damn bruh </p>";
+				echo "<p> damn bruh stop being a fat slob</p>";
 			}
 			if($age >= 65)
 			{
