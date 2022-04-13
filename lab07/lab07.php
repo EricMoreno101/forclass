@@ -103,5 +103,45 @@
 	}
 	
 	
+	if ((isset($_POST['starting'])) && (isset($_POST['value2'])) && (isset($_POST['target_diff'])))
+      	{
+		$starting = filter_var( $_POST['starting'], FILTER_SANITIZE_STRING);
+		$value2 = filter_var( $_POST['value2'], FILTER_SANITIZE_STRING);
+		$target_diff = filter_var( $_POST['target_diff'], FILTER_SANITIZE_STRING);
+
+		echo "<p>The original value is " . $value2 . " " . $starting . "</p>" ;
+	
+		if ($starting == "Fluid Ounces") {
+			if ($target_diff == "liters") {
+				$target_value2 = $value2 /0.0295735;
+			} 
+		}		
+	
+		if ($starting == "Pint") {
+			if ($target_diff == "liters") {
+				$target_value2 = $value2 / .473176 ;
+			} 
+		}
+		
+		if ($starting == "Quart") {
+			if ($target_diff == "liters") {
+				$target_value2 = $value2 / .946353 ;
+			} 
+		}
+		
+		if ($starting == "Gallon") {
+			if ($target_diff == "liters") {
+				$target_value2 = $value2 * 3.78541 ;
+			} 
+		}
+		
+		echo "<p style='color: darkblue ;'>The target value is " . $target_value2 . " " . $target_diff . "</p>" ;
+	}
+	else
+	{
+      		print "<p>Missing or invalid parameters. Please go back to the lab.html page to
+      		enter valid information.<br />";
+      		print "<a href='UnitConvertion.html'>Unit Converter Page</a>";
+	}
 ?>
 	</body>
