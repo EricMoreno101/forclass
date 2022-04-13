@@ -41,6 +41,35 @@
 				<option>meter</option>
 				<option>kilometer</option>
 			</select></p>
+			
+			<select name='starting_weight' id='starting_weight'>
+				<option>Select an original imperial weight unit to convert</option>
+				<option>Ounces</option>
+				<option>Pound</option>
+			</select></p>
+                        <p>Your value(numeric only, the value must in between 0.0 and 120.0)
+                        <input type="number" min="1.0" max="120.0" name="value1" id="value1" /></p>
+                        <p>What is the target unit 
+                        <select name='target_change' id='target_change'>
+				<option>Select a metric target unit</option>
+				<option>grams</option>
+				<option>kilograms</option>
+			</select></p>
+			
+			<select name='starting' id='starting'>
+				<option>Select an original imperial weight unit to convert</option>
+				<option>Fluid Ounces</option>
+				<option>Pint</option>
+				<option>Quart</option>
+				<option>Gallon</option>
+			</select></p>
+                        <p>Your value(numeric only, the value must in between 0.0 and 120.0)
+                        <input type="number" min="1.0" max="120.0" name="value2" id="value2" /></p>
+                        <p>What is the target unit 
+                        <select name='target_diff' id='target_diff'>
+				<option>Select a metric target unit</option>
+				<option>liters</option>
+			</select></p>
                         <input type="submit" value="Click to convert" />
                   </form>
             </div>
